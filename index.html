@@ -6,6 +6,10 @@
     font-family: Verdana, sans-serif;
     }
    </style>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    </script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
     <meta charset="utf-8">
     <title>AR Demo</title>
    
@@ -18,6 +22,16 @@
     }
     </style>
     <h1>*This is a demo of an AR experience*</h1>
+    <model-viewer
+    data-name="baloon"
+    src="files/lakeside_campsite.glb"
+    ios-src="files/Lakeside_Campsite.usdz"
+    ar
+    ar-modes="scene-viewer quick-look"
+    camera-controls
+    auto-rotate
+    poster="./images/baloon.png"
+></model-viewer>
     <img src="images/firefox-icon.png" alt="Image">
 
     <p>@ Carina Poulin 2022</p>
