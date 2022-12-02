@@ -16,7 +16,6 @@
   </head>
   <body>
     <style>
-    
     body {
     font-family: Tahoma, sans-serif;
     font-size: 1.2em; /* 30px/16=1.875em */
@@ -28,6 +27,14 @@
     height: 600px;
     }
     </style>
+    
+    <div>
+    <style scoped>
+    model-viewer::part(default-ar-button) {
+    --scale: 0.75;
+    }
+    </style>
+    </div>
     
     <h1>This is a demo of an AR experience</h1>
     <model-viewer
