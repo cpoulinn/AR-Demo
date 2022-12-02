@@ -25,16 +25,12 @@
     model-viewer {
     width: 800px;
     height: 600px;
+    ::part(default-ar-button) {
+    transform: scale(4.0)
+      }
     }
     </style>
     
-    <div>
-    <style scoped>
-    model-viewer::part(default-ar-button) {
-    --scale: 0.75;
-    }
-    </style>
-    </div>
     
     <h1>This is a demo of an AR experience</h1>
     <model-viewer
