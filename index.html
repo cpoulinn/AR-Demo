@@ -83,5 +83,33 @@
     ></model-viewer>
     <p style="font-size:80%; color:#F4EBD9;">Carina Poulin 2022 </br><a href="https://sketchfab.com/3d-models/aqua-satellite-wWmEeEeS71I2eX4PS281MUMK3B5">Original Aqua satellite by NASA</a> <br>Licensed under <a href="https://creativecommons.org/licenses/by-nc/3.0/">CC Attribution-NonCommercial</a>. </p>
 
-  </body>
+    <style>
+  button{
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 3px solid blue;
+    background-color: blue;
+    box-sizing: border-box;
+  }
+
+  #annotation{
+    background-color: #dddddd;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+    </style>
+    <model-viewer 
+    src="files/aqua_notext.glb"
+    ios-src="files/aqua_notext.usdz" 
+    alt="A 3D model of a Toy Train" camera-controls>
+      <button slot="hotspot-hand" data-position="-0.023 0.0594 0.0714" data-normal="-0.3792 0.0004 0.9253">
+      <div id="annotation">Whistle</div>
+      </button>
+    </model-viewer>
+  
+</body>
 </html>
