@@ -53,7 +53,13 @@
     poster="files/pic.png"
     background-image="files/pexels-philippe-donn-1169754.jpg";     
     ></model-viewer>
+    @media only screen AND (max-width: 736px) { // 736px is the iPhone 6+ max 
+  .mobileHidden { // rename to whatever
+    display: none; // doesn't display in the browser.
     <p>Use phone for augmented reality experience</p><img src="files/frame.png" alt="QR Code" style="width:80px;">
+    }
+   }
+    
 
     
     <p><a href="https://cpoulinn.github.io/AR-Demo/no-annotations">View without annotations</a><br></p> 
