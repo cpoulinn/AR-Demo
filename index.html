@@ -55,17 +55,18 @@
     ></model-viewer>
     
     <style>
-      .myDiv{
-    @media only screen { 
-  .mobileHidden {
-    display: none;
-    }
-   }
-   }
-    </style>
-    <div class="myDiv">
-    <p>Use phone for augmented reality experience</p><img src="files/frame.png" alt="QR Code" style="width:80px;">
-    </div>
+ .MobileContent {
+     display: none;
+	 text-align:center;
+ }
+@media screen and (max-width: 768px) {
+ .MobileContent {
+     display:block;
+ }
+}
+</style>
+<div class="MobileContent"> Use phone for augmented reality experience</p><img src="files/frame.png" alt="QR Code" style="width:80px;" </div>
+    
     
     <p><a href="https://cpoulinn.github.io/AR-Demo/no-annotations">View without annotations</a><br></p> 
     <p style="font-size:80%; color:#F4EBD9;">Carina Poulin 2022 </br><a href="https://sketchfab.com/3d-models/aqua-satellite-wWmEeEeS71I2eX4PS281MUMK3B5">Original Aqua satellite by NASA</a> <br>Licensed under <a href="https://creativecommons.org/licenses/by-nc/3.0/">CC Attribution-NonCommercial</a>. </p>
