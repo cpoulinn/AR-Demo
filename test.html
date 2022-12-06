@@ -61,7 +61,7 @@
 }
 
 @media only screen and (max-width: 620px) {
-  /* For mobile phones: */
+  /* For desktops: */
   .menu, .main, .right {
     width: 100%;
     }
@@ -73,6 +73,18 @@
     display: none;
   }
 }
+
+@media only screen and (min-width: 621px) {
+  /* For mobile phones: */
+  .here {
+  	visibility: hidden;
+    float: right;
+  	width: 60%;
+  	padding: 20 20px;
+    display: none;
+  }
+}
+	
 a:link,a:visited {
     color: #020F2B;  
     }
@@ -81,8 +93,8 @@ a:link,a:visited {
     } 
 }
  
-model-viewer::part(default-ar-button) {
-   transform: scale(4);
+.model-viewer::part(default-ar-button) {
+   transform: scale(3);
     }  
 
 </style>
@@ -111,7 +123,6 @@ model-viewer::part(default-ar-button) {
     camera-orbit="80deg 80deg 2.5m"  
     auto-rotate
     poster="files/pic.png"
-    background-image="files/pexels-philippe-donn-1169754.jpg";     
     ></model-viewer>
   </div>
   
@@ -121,8 +132,9 @@ model-viewer::part(default-ar-button) {
 <div class="QRcode"><p><img src="files/frame.png" alt="QR Code" style="width:150px; float:none;" ></p><p>Use phone for augmented reality experience</p></div>
   </div>
 
-
-  <div class="footer"><p>Carina Poulin 2022</p></div>
+<div class="here"><p style="text-align: right;"><img src="files/here.png" alt="try me" style="width:100%; float:none;" ></p><p style="text-align: right;">Augmented reality experience</p></div>
+  </div>
+<div class="footer"><p>Carina Poulin 2022</p></div>
 
 </body>
 </html>
