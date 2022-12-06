@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">   
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+    </style>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    </script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+    <meta charset="utf-8">
+    <title>AR Demo</title>
+   
+  </head>
+  <body>
+    <style>
+    body {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.4em; /* 30px/16=1.875em */
+    color: #058ED9;
+    background-color:#020f2b;
+    padding-left: 50px;
+    }
+    model-viewer {
+    width: 600px;
+    height: 400px;
+    
+    }
+    model-viewer::part(default-ar-button) {
+      transform: scale(3);
+    }
+    a:link {
+    color: #77685D;  
+    }
+    a:visited {
+    color: #77685D;
+    }
+    </style>
+    
+    <p style="font-size:150%;">Improved 3D model</p>
+    <model-viewer
+    data-name="Satellite_improved"
+    src="files/aqua_notext.glb"
+    ios-src="files/aqua_notext.usdz"
+    ar
+    ar-modes="scene-viewer quick-look"
+    camera-controls
+    auto-rotate
+    poster="files/pic.png"
+    background-image="files/pexels-philippe-donn-1169754.jpg";     
+    ></model-viewer>
+    
+</body>
+</html>
