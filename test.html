@@ -14,8 +14,9 @@
     </script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
- .footer {
+.footer {
    position: fixed;
    left: 0;
    bottom: 0;
@@ -34,8 +35,8 @@
 
 .menu a {
   background-color: #e5e5e5;
-  padding: 8px;
-  margin-top: 7px;
+  padding: 20px;
+  margin-top: 10px;
   display: block;
   width: 100%;
   color: black;
@@ -45,10 +46,11 @@
   float: left;
   width: 60%;
   padding: 0 20px;
-}
+  height: auto;
+  min-height: 100%;
+  }
 
 .right {
-  
   float: left;
   width: 20%;
   padding: 15px;
@@ -76,9 +78,15 @@ a:link {
     color: #77685D;
     } 
 }
+model-viewer {
+    width: 600px;
+    height: 500px;
+    
+    }
 model-viewer::part(default-ar-button) {
-      transform: scale(3);
-}
+    transform: scale(3);
+    }  
+
 </style>
 </head>
 <body style="font-family:Inconsolata;color:#058ED9;background-color:#020f2b;">
@@ -90,6 +98,7 @@ model-viewer::part(default-ar-button) {
 <div style="overflow:auto">
   <div class="menu">
     <a href="https://cpoulinn.github.io/AR-Demo/no-annotations">View without annotations</a>
+    <a href="https://sketchfab.com/3d-models/aqua-satellite-wWmEeEeS71I2eX4PS281MUMK3B5">Original Aqua satellite by NASA</a>
   </div>
   
   <div class="main">
@@ -104,16 +113,17 @@ model-viewer::part(default-ar-button) {
     poster="files/pic.png"
     background-image="files/pexels-philippe-donn-1169754.jpg";     
     ></model-viewer>
-    <div class="QRcode"><p><img src="files/frame.png" alt="QR Code" style="width:80px; float:none;" ></p><p>Use phone for augmented reality experience</p></div>
   </div>
+  
 
   <div class="right">
     
-        <p style="font-size:80%; color:#F4EBD9;"><a href="https://sketchfab.com/3d-models/aqua-satellite-wWmEeEeS71I2eX4PS281MUMK3B5">Original Aqua satellite by NASA</a> <br>Licensed under <a href="https://creativecommons.org/licenses/by-nc/3.0/">CC Attribution-NonCommercial</a>. </p>
+<div class="QRcode"><p><img src="files/frame.png" alt="QR Code" style="width:80px; float:none;" ></p><p>Use phone for augmented reality experience</p></div>
   </div>
-</div>
-<div class="footer"><p>Carina Poulin 2022</p></div>
-  
+
+
+  <div class="footer"><p>Carina Poulin 2022</p></div>
+
 </body>
 </html>
 
