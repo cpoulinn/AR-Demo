@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">   
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+    </style>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+    </script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+    <meta charset="utf-8">
+    <title>AR Demo</title>
+   
+  </head>
+  <body>
+    <style>
+    body {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2em; /* 30px/16=1.875em */
+    color: #058ED9;
+    padding-left: 50px;
+    }
+    model-viewer {
+    width: 400px;
+    height: 400px;
+    
+    }
+    model-viewer::part(default-ar-button) {
+      transform: scale(3);
+    }
+
+    </style>
+   
+    <model-viewer
+    style="width: 100%; height: 380px; top: 0px;"
+    data-name="Dinoflagellate"
+    src="files/dino.glb"
+    ios-src="files/dino.usdz"
+    ar
+    ar-modes="scene-viewer quick-look"
+    camera-controls
+    camera-orbit="80deg 80deg 2.5m"  
+    auto-rotate
+    loading="eager"
+    ></model-viewer>
+    
+</body>
+</html>
