@@ -2,9 +2,10 @@
 <html>
 <head>
 <style>
-  /* Set the height of the header to be equal to the viewport height */
+   /* Set the height of the header to be equal to the viewport height */
   #header {
-    height: 100vh;
+    height: 100%;
+    padding-left: 50px
   }
 
   /* Create a parallax effect by making the background move at a slower rate than the rest of the page */
@@ -15,21 +16,25 @@
     background-size: cover;
     height: 100%;
     width: 100%;
+     /* Use a smaller value for the background-position property to make the background move faster */
+  background-position: center -100%;
+  /* Add a transition effect to make the scrolling smoother */
+  transition: background-position 0.5s ease;
   }
   
-.grid {
+.grid2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.grid img {
+.grid2 img {
   width: 25%;
   margin: 5px;
 }
 
 @media (max-width: 600px) {
-  .grid img {
+  .grid2 img {
     width: 50%;
   }
 }
@@ -47,17 +52,30 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
  
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1fr represents one fraction of the available space, so this creates two columns of equal width */
+}
 
+.left-column {
+  grid-column: 1 / 2; /* This element will span the first column */
+}
+
+.right-column {
+  grid-column: 2 / 3; /* This element will span the second column */
+}
 </style>
 </head>
 <body>
 <!-- Set the background image for the header -->
-<div id="header" class="bg-image" style="background-image: url('https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+<div id="header" class="bg-image" style="background-image: url('https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
   <!-- Add your content here -->
-  <h1> <br><br><br><br>header text</h1>
+  <h1><br><br><br><br><br><br> header text<br><br><br><br><br><br></h1>
 </div>
 
-<div class="grid">
+
+
+<div class="grid2">
   <img src="https://via.placeholder.com/150" alt="image 1">
   <img src="https://via.placeholder.com/150" alt="image 2">
   <img src="https://via.placeholder.com/150" alt="image 3">
@@ -73,6 +91,33 @@ form textarea {
   <input type="submit" value="Send" />
 </form>
 
+<div class="container">
+  <div class="left-column">
+    <img src="my-image.jpg" alt="My image">
+    <p>Some text</p>
+  </div>
+  <div class="right-column">
+    <p>Some more text</p>
+    <img src="my-image.jpg" alt="My image2">
+  </div>
+</div>
 
 </body>
 </html>
+<script>
+   // Get the header element
+  var header = document.querySelector('#header');
+
+  // Get the height of the viewport
+  var vh = window.innerHeight;
+
+  // Add an event listener to update the parallax effect on scroll
+  window.addEventListener('scroll', function() {
+    // Calculate the scroll position
+    var scrollY = window.scrollY;
+
+    // Update the background position to create a parallax effect
+    header.style.backgroundPosition = 'center ' + (scrollY * 0.5) + 'px';
+  });
+</script>
+      
