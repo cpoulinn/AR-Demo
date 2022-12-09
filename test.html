@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html>
+<head>
 <style>
   /* Set the height of the header to be equal to the viewport height */
   #header {
@@ -14,11 +16,63 @@
     height: 100%;
     width: 100%;
   }
-</style>
+  
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.grid img {
+  width: 25%;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .grid img {
+    width: 50%;
+  }
+}
+form {
+  margin: 20px 20px 20px 20px;
+  padding-left: 50px;
+}
+
+form label {
+  display: block;
+  margin: 5px 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+ 
+
+</style>
+</head>
+<body>
 <!-- Set the background image for the header -->
-<div id="header" class="bg-image" style="background-image: url('https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+<div id="header" class="bg-image" style="background-image: url('https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
   <!-- Add your content here -->
-  <h1> test </h1>
-  <p> test 2 </p>
+  <h1> header text</h1>
 </div>
+
+<div class="grid">
+  <img src="https://via.placeholder.com/150" alt="image 1">
+  <img src="https://via.placeholder.com/150" alt="image 2">
+  <img src="https://via.placeholder.com/150" alt="image 3">
+  <img src="https://via.placeholder.com/150" alt="image 4">
+  <img src="https://via.placeholder.com/150" alt="image 5">
+  <img src="https://via.placeholder.com/150" alt="image 6">
+</div>
+
+<form>
+  <label>Name: <input type="text" name="name" /></label><br />
+  <label>Email: <input type="email" name="email" /></label><br />
+  <label>Message:<br /><textarea name="message"></textarea></label><br />
+  <input type="submit" value="Send" />
+</form>
+
+
+</body>
+</html>
